@@ -46,7 +46,7 @@
     </section>
 </header>
 <!-- hero -->
-<section class="w-11/12 mx-auto py-8 space-y-5">
+<section id="hero" class="w-11/12 mx-auto py-8 space-y-5">
 <h2 class="text-4xl font-bold">welcome to pay <span class="text-primary">oo</span></h2>
  <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
 <div class=" buttons grid grid-cols-3 gap-3">
@@ -77,8 +77,43 @@
 
 </div>
 </section>
+<!-- add money section -->
+ <section id="addMoney" class="w-11/12 mx-auto py-5">
+     <h2 class="font-bold text-2xl pb-8">Add Money</h2>
+      <div class="form">
+    <div class="card bg-base-100 w-full shadow-2xl rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+     <label class="label text-neutral font-bold text-xl">Select Bank</label>
+          
+                <select id="add-money-bank" class=" select  rounded-2xl w-full">
+                    <option class="disabled: selected">select a bank</option>
+                    <option id="BD BANK">BD BANK</option>
+                    <option id="SONLAI">SONLAI</option>
+                    <option id="RUPLI">RUPLI</option>
+                </select>
+                </label>
+          <br>
+            <label class="label text-neutral font-bold text-xl">Bank Aacount number</label>
+            <input id="add-bank-acount" type="text" maxlength="11" minlength="11" class="input rounded-2xl w-full" placeholder="enter bank acount number" />
+            <br>
+
+             <label class="label text-neutral font-bold text-xl">Amount to add</label>
+            <input id="add-money-amount" type="text"  class="input rounded-2xl w-full" placeholder="enter amount" />
+          <br>
+
+            <label class="label text-neutral font-bold text-xl ">pin Number</label>
+            <input id="add-money-pin" type="password" maxlength="4" minlength="4" class="input rounded-2xl w-full" placeholder="enter 4 digit pin" />
+            
+            <button id="add-money-btn" class=" text-2xl btn btn-primary rounded-full mt-4">add money</button>
+        </fieldset>
+       </div>
+    </div>
+  </div>
+
+ </section>
 <!-- cashout section -->
-<section class="w-11/12 mx-auto py-5">
+<section id="cashout" class="w-11/12 mx-auto py-5">
     <h2 class="font-bold text-2xl pb-8">Cashout</h2>
     <div class="form">
     <div class="card bg-base-100 w-full shadow-2xl rounded-2xl">
@@ -102,6 +137,7 @@
   </div>
 </section> 
 <script src="./script/machine.js"></script>
+<script src="./script/addMoney.js"></script>
 <script src="./script/cashout.js"></script>
 </body>
 </html>

@@ -10,24 +10,24 @@ document.getElementById('cashout-btn').addEventListener('click',function(){
   //2-get the amount
   const cashoutvalue=getValueFromInput('cashout-amount')
         //3-get the balance current
-    const balanceinput=document.getElementById('balance')
-    const amount=balanceinput.innerText;
-    console.log('current balance',amount);
-    //4-calcolate new balance
-   const newbalance=Number(amount)-Number(cashoutvalue);
+        const amount=currentBalance();
+    
+       //4-calcolate new balance
+   const newbalance=amount-Number(cashoutvalue);
         
     if(newbalance<0){
      alert('ballance is not sufficent');
      return;
    
   }
-   console.log('new balance',newbalance);
+     //console.log('new balance',newbalance);
     //5- validation and get the pin
     const pin=getValueFromInput('cashout-pin');
     if(pin==='1234'){
       alert('cashout successfull');
       console.log('new ballance',newbalance)
-      balanceinput.innerText=newbalance;
+      setValue(newbalance);
+      // document.getElementById('balance').innerText=newbalance;
     
     }
     else{
