@@ -50,35 +50,35 @@
 <h2 class="text-4xl font-bold">welcome to pay <span class="text-primary">oo</span></h2>
  <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
 <div class=" buttons grid grid-cols-3 gap-3">
-    <button class="btn flex-col h-full btn-primary btn-soft py-4">
+    <button onclick="showOnly('addMoney')" class="btn flex-col h-full btn-primary btn-soft py-4">
         <img src="./assets/opt-1.png" alt="">
         <p>add money</p>
     </button>
-    <button class="btn flex-col h-full btn-primary btn-soft py-4">
+    <button onclick="showOnly('cashout')" class="btn flex-col h-full btn-primary btn-soft py-4">
         <img src="./assets/opt-1.png" alt="">
-        <p>add money</p>
+        <p>cashout</p>
     </button>
     <button class="btn flex-col h-full btn-primary btn-soft py-4">
         <img src="./assets/opt-1.png" alt="">
-        <p>add money</p>
+        <p>send money</p>
     </button>
     <button class="btn flex-col h-full btn-primary btn-soft py-4">
         <img src="./assets/opt-1.png" alt="">
-        <p>add money</p>
+        <p>get bonus</p>
     </button>
     <button class="btn flex-col h-full btn-primary btn-soft py-4">
         <img src="./assets/opt-1.png" alt="">
-        <p>add money</p>
+        <p>pay bill</p>
     </button>
-    <button class="btn flex-col h-full btn-primary btn-soft py-4">
+    <button onclick="showOnly('history')" class="btn flex-col h-full btn-primary btn-soft py-4">
         <img src="./assets/opt-1.png" alt="">
-        <p>add money</p>
+        <p>transactions</p>
     </button>
 
 </div>
 </section>
 <!-- add money section -->
- <section id="addMoney" class="w-11/12 mx-auto py-5">
+ <section id="addMoney" class="w-11/12 mx-auto py-5 ">
      <h2 class="font-bold text-2xl pb-8">Add Money</h2>
       <div class="form">
     <div class="card bg-base-100 w-full shadow-2xl rounded-2xl">
@@ -136,6 +136,14 @@
     </div>
   </div>
 </section> 
+<!-- transactions -->
+ <section id="history" class="w-11/12 mx-auto py-5 space-y-5 hidden" >
+    <h2 class="font-bold text-2xl pb-8">transactions</h2>
+    <div class="" id="history-container">
+    
+    </div>
+
+ </section>
 <script src="./script/machine.js"></script>
 <script src="./script/addMoney.js"></script>
 <script src="./script/cashout.js"></script>

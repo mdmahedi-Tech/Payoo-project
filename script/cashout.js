@@ -25,8 +25,21 @@ document.getElementById('cashout-btn').addEventListener('click',function(){
     const pin=getValueFromInput('cashout-pin');
     if(pin==='1234'){
       alert('cashout successfull');
-      console.log('new ballance',newbalance)
+     
       setValue(newbalance);
+      //catch the history container
+     const histoy=document.getElementById('history-container');
+     //create a new div
+     const newhistory= document.createElement('div');
+     //create a new html
+     newhistory.innerHTML= `
+      <div class="transacton-card p-5 bg-base-100">
+      cash out ${cashoutvalue} taka successfully to ${agentnumberinput} 
+        at ${new Date()}
+     </div>
+     `
+     //append the newhistory in history
+     histoy.appendChild(newhistory);
       // document.getElementById('balance').innerText=newbalance;
     
     }

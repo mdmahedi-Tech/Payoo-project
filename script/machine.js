@@ -19,3 +19,19 @@ function setValue(value){
     const ballanceElement=document.getElementById('balance');
     ballanceElement.innerText=value;
 }
+ //machine to hide all and show id
+ function showOnly(id){
+    
+    const addmoney=document.getElementById('addMoney');
+    const cashout=document.getElementById('cashout');
+     const history=document.getElementById('history');
+    //   console.log(`addmoney${addmoney} and cashout ${cashout}`)
+    //hide to all
+    addmoney.classList.add('hidden')
+    cashout.classList.add('hidden')
+    history.classList.add('hidden')
+
+    // show only id wala
+    const selected=document.getElementById(id);
+    selected.classList.remove('hidden');
+ }

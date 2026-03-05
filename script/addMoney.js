@@ -23,9 +23,22 @@ document.getElementById('add-money-btn').addEventListener('click',function(){
    
     const pin=getValueFromInput('add-money-pin');
    if(pin==='1234'){
-    alert(`add money success ${selectBank} 
+    alert(`add money success from ${selectBank} 
         at ${new Date()}`);
      setValue(newbalance);
+     //catch the history container
+     const histoy=document.getElementById('history-container');
+     //create a new div
+     const newhistory= document.createElement('div');
+     //create a new html
+     newhistory.innerHTML= `
+      <div class="transacton-card p-5 bg-base-100">
+      add ${addmoney} tk successfully from ${selectBank} acc no ${acountNumber}
+        at ${new Date()}
+     </div>
+     `
+     //append the newhistory in history
+     histoy.appendChild(newhistory);
     return;
    }
    else{
