@@ -23,8 +23,15 @@ document.getElementById('transfer-btn').addEventListener('click',function(){
     //get the pin
     const pin=getValueFromInput('transfer-pin');
     if(pin==='1234'){
-     alert('transfer succesfull')
+     alert(`
+      balance transfer success ${transbalance} taka 
+      to ${transfernumber}
+      at ${new Date()}
+      `)
      setValue(newbalance);
+
+     //add transaaction history
+     
      //catch the history container
      const history=document.getElementById('history-container');
      //create a div history

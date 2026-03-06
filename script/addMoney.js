@@ -27,6 +27,8 @@ document.getElementById('add-money-btn').addEventListener('click',function(){
     alert(`add money success from ${selectBank} 
         at ${new Date()}`);
      setValue(newbalance);
+
+     //add transaction history
      //catch the history container
      const histoy=document.getElementById('history-container');
      //create a new div

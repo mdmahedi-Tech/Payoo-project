@@ -28,6 +28,8 @@ document.getElementById('cashout-btn').addEventListener('click',function(){
       alert('cashout successfull');
      
       setValue(newbalance);
+
+      //add transaction history
       //catch the history container
      const histoy=document.getElementById('history-container');
      //create a new div

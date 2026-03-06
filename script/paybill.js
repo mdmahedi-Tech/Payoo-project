@@ -27,7 +27,11 @@ document.getElementById('add-billMoney-btn').addEventListener('click',function()
    //get the pin and validate the pin
    const pin=getValueFromInput('add-billMoney-pin');
    if(pin==='1234'){
-    alert('payment successfull');
+
+     // alert('success payment')
+    alert(`payment successfull ${payamount} taka
+         to ${accountno}
+        at ${new Date()}`);
     setValue(newbalance)
 
     //add trasaction history
