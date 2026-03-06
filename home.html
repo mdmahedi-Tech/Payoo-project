@@ -55,23 +55,23 @@
         <p>add money</p>
     </button>
     <button onclick="showOnly('cashout')" class="btn flex-col h-full btn-primary btn-soft py-4">
-        <img src="./assets/opt-1.png" alt="">
+        <img src="./assets/opt-2.png" alt="">
         <p>cashout</p>
     </button>
-    <button class="btn flex-col h-full btn-primary btn-soft py-4">
-        <img src="./assets/opt-1.png" alt="">
-        <p>send money</p>
+    <button onclick="showOnly('transfer')" class="btn flex-col h-full btn-primary btn-soft py-4">
+        <img src="./assets/opt-3.png" alt="">
+        <p>Transfer money</p>
     </button>
     <button class="btn flex-col h-full btn-primary btn-soft py-4">
-        <img src="./assets/opt-1.png" alt="">
+        <img src="./assets/opt-4.png" alt="">
         <p>get bonus</p>
     </button>
     <button class="btn flex-col h-full btn-primary btn-soft py-4">
-        <img src="./assets/opt-1.png" alt="">
+        <img src="./assets/opt-5.png" alt="">
         <p>pay bill</p>
     </button>
     <button onclick="showOnly('history')" class="btn flex-col h-full btn-primary btn-soft py-4">
-        <img src="./assets/opt-1.png" alt="">
+        <img src="./assets/opt-6.png" alt="">
         <p>transactions</p>
     </button>
 
@@ -136,6 +136,68 @@
     </div>
   </div>
 </section> 
+
+ <!-- transfer money section -->
+  <section id="transfer" class="w-11/12 mx-auto py-5">
+    <h2 class="font-bold text-2xl pb-8">transfer money</h2>
+    <div class="form">
+    <div class="card bg-base-100 w-full shadow-2xl rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+            <label class="label text-neutral font-bold text-xl">User Account Number</label>
+            <input id="transfer-account" type="text" maxlength="11" minlength="11" class="input rounded-2xl w-full" placeholder="enter 11 digit number" />
+            <br>
+
+             <label class="label text-neutral font-bold text-xl">Amount</label>
+            <input id="transfer-amount" type="text"  class="input rounded-2xl w-full" placeholder="enter amount to transfer" />
+          <br>
+
+            <label class="label text-neutral font-bold text-xl ">4 Digit pin</label>
+            <input id="transfer-pin" type="password" maxlength="4" minlength="4" class="input rounded-2xl w-full" placeholder="enter 4 digit pin" />
+            
+            <button id="transfer-btn" class=" text-2xl btn btn-primary rounded-full mt-4">Transfer</button>
+        </fieldset>
+       </div>
+    </div>
+  </div>
+</section>
+
+<!-- pay bill -->
+ 
+ <section id="payBill" class="w-11/12 mx-auto py-5 ">
+     <h2 class="font-bold text-2xl pb-8">pay bill</h2>
+      <div class="form">
+    <div class="card bg-base-100 w-full shadow-2xl rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+     <label class="label text-neutral font-bold text-xl">Select to pay</label>
+          
+                <select id="pay-money-bank" class=" select  rounded-2xl w-full">
+                    <option class="disabled: selected">select back</option>
+                    <option id="BD BANK">IFIC BANK</option>
+                    <option id="SONLAI">AGRANI BANK</option>
+                    <option id="RUPLI">AGRICULATURE BANK</option>
+                </select>
+                </label>
+          <br>
+            <label class="label text-neutral font-bold text-xl">Biller Aacount number</label>
+            <input id="add-bill-acount" type="text" maxlength="11" minlength="11" class="input rounded-2xl w-full" placeholder="enter bank acount number" />
+            <br>
+
+             <label class="label text-neutral font-bold text-xl">Amount to pay</label>
+            <input id="add-bilMmoney-amount" type="text"  class="input rounded-2xl w-full" placeholder="enter amount" />
+          <br>
+
+            <label class="label text-neutral font-bold text-xl ">pin Number</label>
+            <input id="add-billMoney-pin" type="password" maxlength="4" minlength="4" class="input rounded-2xl w-full" placeholder="enter 4 digit pin" />
+            
+            <button id="add-billMoney-btn" class=" text-2xl btn btn-primary rounded-full mt-4">add money</button>
+        </fieldset>
+       </div>
+    </div>
+  </div>
+
+ </section>
 <!-- transactions -->
  <section id="history" class="w-11/12 mx-auto py-5 space-y-5 hidden" >
     <h2 class="font-bold text-2xl pb-8">transactions</h2>
@@ -144,8 +206,10 @@
     </div>
 
  </section>
+
 <script src="./script/machine.js"></script>
 <script src="./script/addMoney.js"></script>
 <script src="./script/cashout.js"></script>
+<script src="./script/transfer.js"></script>
 </body>
 </html>

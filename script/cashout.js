@@ -8,12 +8,13 @@ document.getElementById('cashout-btn').addEventListener('click',function(){
   
  
   //2-get the amount
-  const cashoutvalue=getValueFromInput('cashout-amount')
+  const cashoutamount=getValueFromInput('cashout-amount')
         //3-get the balance current
-        const amount=currentBalance();
+        
     
        //4-calcolate new balance
-   const newbalance=amount-Number(cashoutvalue);
+       const amount=currentBalance();
+   const newbalance=amount-Number(cashoutamount);
         
     if(newbalance<0){
      alert('ballance is not sufficent');
