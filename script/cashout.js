@@ -7,7 +7,7 @@ document.getElementById('cashout-btn').addEventListener('click',function(){
   }
   
  
-  //2-get the amount
+       //2-get the cash out amount
   const cashoutamount=getValueFromInput('cashout-amount')
         //3-get the balance current
         
@@ -35,7 +35,7 @@ document.getElementById('cashout-btn').addEventListener('click',function(){
      //create a new html
      newhistory.innerHTML= `
       <div class="transacton-card p-5 bg-base-100">
-      cash out ${cashoutvalue} taka successfully to ${agentnumberinput} 
+      cash out ${cashoutamount} taka successfully to ${agentnumberinput} 
         at ${new Date()}
      </div>
      `

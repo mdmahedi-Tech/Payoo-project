@@ -16,6 +16,7 @@ document.getElementById('add-money-btn').addEventListener('click',function(){
     }
     //add money amount
     const addmoney=getValueFromInput('add-money-amount');
+    //calculate
     const newbalance=currentBalance()+Number(addmoney);
     console.log('after adding',newbalance);
 

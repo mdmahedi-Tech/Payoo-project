@@ -26,12 +26,14 @@ function setValue(value){
     const cashout=document.getElementById('cashout');
      const history=document.getElementById('history');
      const transfer=document.getElementById('transfer');
+     const payBill=document.getElementById('payBill');
     //   console.log(`addmoney${addmoney} and cashout ${cashout}`)
     //hide to all
     addmoney.classList.add('hidden');
     cashout.classList.add('hidden');
     history.classList.add('hidden');
     transfer.classList.add('hidden');
+    payBill.classList.add('hidden');
 
     // show only id wala
     const selected=document.getElementById(id);
